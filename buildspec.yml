@@ -2,5 +2,5 @@ version: 0.2
 phases:
     build:
         commands:
-          - aws s3 cp --recursive ./* s3://dev-pev/
+          - aws s3 cp ./* s3://dev-pev/ --recursive 
           - aws cloudfront create-invalidation --distribution-id E3LDZ8JU2O3SVG --path /\* 
