@@ -1,0 +1,5 @@
+version: 1
+build:
+    commands:
+      - aws s3 cp --recursive ./ s3://dev-pev
+      - aws cloudfront create-invalidation --distribution-id E3LDZ8JU2O3SVG --path /\*
